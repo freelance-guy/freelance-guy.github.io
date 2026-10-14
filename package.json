@@ -2,7 +2,7 @@
   "name": "freelance-guy-github-io",
   "version": "0.0.1",
   "private": true,
-  "description": "SiteMedic by Ziegfrid — Website Triage & Care",
+  "description": "SiteMedic by Ziegfrid \u2014 Website Triage & Care",
   "keywords": [
     "quasar",
     "quasar-app",
@@ -20,7 +20,7 @@
     "dev": "quasar dev",
     "build": "quasar build",
     "build:ssg": "quasar build -m ssg",
-    "deploy": "quasar build -m ssg && gh-pages -d dist/ssg",
+    "deploy": "quasar build -m ssg && gh-pages -d dist/ssg --dotfiles",
     "typecheck": "vue-tsc --noEmit",
     "postinstall": "quasar prepare --silent"
   },
