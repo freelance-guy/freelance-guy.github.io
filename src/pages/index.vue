@@ -4,7 +4,7 @@
       <q-toolbar class="q-px-md">
         <q-toolbar-title class="font-mono text-weight-bold" shrink>
           <router-link to="/" class="text-white" style="text-decoration: none">
-            <span class="text-term-green">~/</span>freelance-guy
+            <span class="text-term-green">~/</span>sitemedic
             <span class="text-term-amber">▊</span>
           </router-link>
         </q-toolbar-title>
@@ -82,7 +82,7 @@
           fixes</span
         >
         <span
-          >© {{ year }} freelance-guy ·
+          >© {{ year }} sitemedic ·
           <a
             :href="portfolioUrl"
             target="_blank"

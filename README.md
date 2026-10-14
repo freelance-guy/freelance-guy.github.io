@@ -1,4 +1,4 @@
-# Quasar App (freelance-guy-github-io)
+# SiteMedic by Ziegfrid
 
 ## Install the dependencies
 

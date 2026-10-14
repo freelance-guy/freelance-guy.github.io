@@ -1,13 +1,13 @@
 export const SITE_URL = "https://freelance-guy.github.io";
-export const SITE_NAME = "Freelance Guy — Website Triage & Care";
+export const SITE_NAME = "SiteMedic by Ziegfrid";
 export const OG_IMAGE = `${SITE_URL}/og-cover.svg`;
 
 export const HOME_TITLE =
-  "Freelance Guy — Bug Fixes, Maintenance, Builds & Migrations";
+  "SiteMedic — Bug Fixes, Maintenance, Builds & Migrations";
 export const HOME_DESCRIPTION =
   "Quick website bug fixes, maintenance, version upgrades, performance boosts, SSL renewals, server OS updates, database care, scratch builds and stack migrations: PHP to Node, Laravel to NestJS, Vue to React.";
 
-export const CONTACT_TITLE = "Contact — Get a Website Fix | Freelance Guy";
+export const CONTACT_TITLE = "Contact — Get a Website Fix | SiteMedic";
 export const CONTACT_DESCRIPTION =
   "Contact for website fixes, maintenance and migrations. Email, WhatsApp, Viber, LinkedIn, GitHub. Send your URL + symptom for a fix plan and ETA.";
 
@@ -15,7 +15,7 @@ export function professionalServiceJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Freelance Guy — Website Triage & Care",
+    name: "SiteMedic by Ziegfrid",
     url: SITE_URL,
     description: HOME_DESCRIPTION,
     provider: {

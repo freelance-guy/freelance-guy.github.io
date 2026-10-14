@@ -9,8 +9,8 @@
   <circle cx="120" cy="118" r="9" fill="#ff5f56"/>
   <circle cx="148" cy="118" r="9" fill="#ffb454"/>
   <circle cx="176" cy="118" r="9" fill="#33ff99"/>
-  <text x="110" y="250" font-family="monospace" font-size="64" font-weight="bold" fill="#e6eaf2">~/freelance-guy</text>
+  <text x="110" y="250" font-family="monospace" font-size="64" font-weight="bold" fill="#e6eaf2">~/sitemedic</text>
   <text x="110" y="330" font-family="monospace" font-size="54" font-weight="bold" fill="#33ff99">Ship it. Fix it. Keep it running.</text>
   <text x="110" y="400" font-family="monospace" font-size="28" fill="#8b95a7">bug fixes · maintenance · upgrades · migrations</text>
-  <text x="110" y="470" font-family="monospace" font-size="28" fill="#ffb454">$ contact --now · freelance-guy.github.io</text>
+  <text x="110" y="470" font-family="monospace" font-size="28" fill="#ffb454">$ contact --now · SiteMedic · freelance-guy.github.io</text>
 </svg>
