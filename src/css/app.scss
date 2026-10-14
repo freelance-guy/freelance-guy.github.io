@@ -1,1 +1,100 @@
-// app global css
+// app global css — dark terminal theme, SVG-driven, SSG-safe (no external fonts)
+
+:root {
+  --term-bg: #0a0e14;
+  --term-surface: #121a24;
+  --term-surface-2: #182230;
+  --term-border: #26313f;
+  --term-text: #e6eaf2;
+  --term-muted: #8b95a7;
+  --term-green: #33ff99;
+  --term-amber: #ffb454;
+  --term-blue: #7dd3fc;
+  --term-mono:
+    ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+}
+
+body {
+  background: var(--term-bg);
+  color: var(--term-text);
+}
+
+.font-mono {
+  font-family: var(--term-mono);
+}
+
+.term-surface {
+  background: var(--term-surface);
+  border: 1px solid var(--term-border);
+}
+
+.term-card {
+  background: var(--term-surface);
+  border: 1px solid var(--term-border);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.term-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 28px;
+  background: var(--term-surface-2);
+  border-bottom: 1px solid var(--term-border);
+}
+
+.term-card__dots {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  display: flex;
+  gap: 6px;
+  z-index: 1;
+}
+
+.term-card__dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: block;
+}
+
+.term-card__body {
+  padding-top: 44px;
+}
+
+.text-term-green {
+  color: var(--term-green);
+}
+.text-term-amber {
+  color: var(--term-amber);
+}
+.text-term-muted {
+  color: var(--term-muted);
+}
+.bg-term-surface {
+  background: var(--term-surface);
+}
+
+.svg-grid-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.prompt::before {
+  content: "$ ";
+  color: var(--term-green);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}

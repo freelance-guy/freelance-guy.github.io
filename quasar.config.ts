@@ -26,7 +26,8 @@ export default defineConfig((/* ctx */) => {
       // 'line-awesome',
 
       "roboto-font", // optional, you are not bound to it
-      "material-icons" // optional, you are not bound to it
+      "material-icons", // optional, you are not bound to it
+      "fontawesome-v7"
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#build
@@ -45,10 +46,10 @@ export default defineConfig((/* ctx */) => {
       // https://v2.quasar.dev/quasar-cli-vite/page-routing-with-vue-router#filename-based-routing
       filenameBasedRouting: true,
 
-      vueRouterMode: "hash" // available values: 'hash', 'history'
+      vueRouterMode: "history", // available values: 'hash', 'history'
       // vueRouterBase,
 
-      // publicPath: '/',
+      publicPath: "/"
       // define: {},
       // defineEnv: {}
       // ignorePublicFolder: true,
@@ -89,7 +90,7 @@ export default defineConfig((/* ctx */) => {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: ["Meta", "Notify"]
     },
 
     // animations: 'all', // --- includes all animations
@@ -140,6 +141,8 @@ export default defineConfig((/* ctx */) => {
 
     // https://v2.quasar.dev/quasar-cli-vite/developing-ssg/configuring-ssg
     ssg: {
+      routes: ["/", "/contact"],
+      error404HtmlFilename: "404.html"
       // onSsgRendererError: 'abort',
       // ssgRendererConcurrency: 1,
       // ssgRendererRetryCount: 0,

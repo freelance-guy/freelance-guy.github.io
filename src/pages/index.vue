@@ -1,94 +1,104 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title> Quasar App </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+  <q-layout view="hHh lpR fff" class="bg-dark text-white">
+    <q-header class="bg-dark" bordered style="border-color: #26313f">
+      <q-toolbar class="q-px-md">
+        <q-toolbar-title class="font-mono text-weight-bold" shrink>
+          <router-link to="/" class="text-white" style="text-decoration: none">
+            <span class="text-term-green">~/</span>freelance-guy
+            <span class="text-term-amber">▊</span>
+          </router-link>
+        </q-toolbar-title>
+        <q-space />
+        <!-- Desktop: right aligned -->
+        <div class="row q-gutter-sm gt-sm">
+          <q-btn
+            flat
+            dense
+            no-caps
+            to="/"
+            label="Home"
+            class="font-mono"
+            exact
+          />
+          <q-btn
+            flat
+            dense
+            no-caps
+            :href="portfolioUrl"
+            target="_blank"
+            rel="noopener"
+            label="About Me ↗"
+            class="font-mono"
+          />
+          <q-btn
+            flat
+            dense
+            no-caps
+            to="/contact"
+            label="Contact"
+            class="font-mono"
+            color="green"
+          />
+        </div>
+        <!-- Mobile menu -->
+        <q-btn flat dense round icon="menu" class="lt-md" aria-label="Menu">
+          <q-menu dark>
+            <q-list style="min-width: 180px">
+              <q-item clickable v-ripple to="/" exact v-close-popup>
+                <q-item-section class="font-mono">Home</q-item-section>
+              </q-item>
+              <q-item
+                clickable
+                v-ripple
+                :href="portfolioUrl"
+                target="_blank"
+                v-close-popup
+              >
+                <q-item-section class="font-mono">About Me ↗</q-item-section>
+              </q-item>
+              <q-item clickable v-ripple to="/contact" v-close-popup>
+                <q-item-section class="font-mono">Contact</q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
       </q-toolbar>
     </q-header>
-
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
-        <q-item-label header> Essential Links </q-item-label>
-
-        <EssentialLink
-          v-for="link in linksList"
-          :key="link.label"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
 
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer
+      class="bg-dark text-term-muted"
+      bordered
+      style="border-color: #26313f"
+    >
+      <div
+        class="row items-center justify-between q-px-md q-py-sm font-mono text-caption"
+      >
+        <span
+          ><span class="status-dot bg-green q-mr-xs"></span>available for
+          fixes</span
+        >
+        <span
+          >© {{ year }} freelance-guy ·
+          <a
+            :href="portfolioUrl"
+            target="_blank"
+            rel="noopener"
+            class="text-term-green"
+            >zgualberto.github.io</a
+          ></span
+        >
+      </div>
+    </q-footer>
   </q-layout>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import EssentialLink, {
-  type EssentialLinkProps
-} from "@/components/EssentialLink.vue";
+import { computed } from "vue";
+import { portfolioUrl } from "@/data/contacts";
 
-const linksList: EssentialLinkProps[] = [
-  {
-    label: "Docs",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev"
-  },
-  {
-    label: "GitHub",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework"
-  },
-  {
-    label: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev"
-  },
-  {
-    label: "Forum",
-    caption: "forum.quasar.dev",
-    icon: "record_voice_over",
-    link: "https://forum.quasar.dev"
-  },
-  {
-    label: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev"
-  },
-  {
-    label: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev"
-  },
-  {
-    label: "Quasar Awesome",
-    caption: "Community Quasar projects",
-    icon: "favorite",
-    link: "https://awesome.quasar.dev"
-  }
-];
-
-const leftDrawerOpen = ref(false);
-
-function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
-}
+const year = computed(() => new Date().getFullYear());
 </script>
