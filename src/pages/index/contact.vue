@@ -5,11 +5,12 @@
       >Talk to a human, get a fix</h1
     >
     <p class="text-term-muted"
-      >Fastest: email with your URL + symptom/screenshot. Also on WhatsApp,
-      Viber, LinkedIn and GitHub.</p
+      >Fastest: email with your URL + symptom, or what you want built — a fix,
+      AI integration or a mobile app. Also on WhatsApp, Viber, LinkedIn and
+      GitHub.</p
     >
 
-    <div class="row q-col-gutter-md q-mt-md">
+    <div class="row justify-center q-col-gutter-md q-mt-md">
       <div v-for="c in contacts" :key="c.label" class="col-12 col-sm-6">
         <q-card dark bordered class="term-card">
           <q-card-section class="row items-center q-gutter-sm">
@@ -57,7 +58,8 @@ subject: [fix-request] &lt;your-site-url&gt; — &lt;one-line symptom&gt;
 1. URL:
 2. What broke / when:
 3. Hosting + stack (if known):
-4. Deadline:</pre>
+4. Deadline:
+5. New work (if any): AI / mobile / build / migration</pre>
       <div class="row q-gutter-sm q-mt-md">
         <q-btn
           color="green"

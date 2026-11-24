@@ -69,7 +69,7 @@
       <h2 class="font-mono text-h4 text-weight-bold q-mt-none"
         >What I patch, tune &amp; keep alive</h2
       >
-      <div class="row q-col-gutter-md q-mt-sm">
+      <div class="row justify-center q-col-gutter-md q-mt-sm">
         <div
           v-for="s in services"
           :key="s.slug"
@@ -91,7 +91,7 @@
         projects end-to-end and migrate language → language, framework →
         framework, with staging, tests and rollback plan.
       </p>
-      <div class="row q-col-gutter-md q-mt-sm">
+      <div class="row justify-center q-col-gutter-md q-mt-sm">
         <div class="col-12 col-md-6">
           <div class="term-card q-pa-md term-card__body full-height">
             <div class="term-card__dots" aria-hidden="true">

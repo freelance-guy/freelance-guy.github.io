@@ -5,11 +5,11 @@ export const OG_IMAGE = `${SITE_URL}/og-cover.svg`;
 export const HOME_TITLE =
   "SiteMedic — Bug Fixes, Maintenance, Builds & Migrations";
 export const HOME_DESCRIPTION =
-  "Quick website bug fixes, maintenance, version upgrades, performance boosts, SSL renewals, server OS updates, database care, scratch builds and stack migrations: PHP to Node, Laravel to NestJS, Vue to React.";
+  "Quick website bug fixes, maintenance, version upgrades, performance boosts, SSL renewals, server OS updates, database care, scoped AI integration, React Native mobile apps with Play Store & App Store releases, scratch builds and stack migrations: PHP to Node, Laravel to NestJS, Vue to React.";
 
 export const CONTACT_TITLE = "Contact — Get a Website Fix | SiteMedic";
 export const CONTACT_DESCRIPTION =
-  "Contact for website fixes, maintenance and migrations. Email, WhatsApp, Viber, LinkedIn, GitHub. Send your URL + symptom for a fix plan and ETA.";
+  "Contact for website fixes, maintenance, AI integration and mobile app work. Email, WhatsApp, Viber, LinkedIn, GitHub. Send your URL + symptom for a fix plan and ETA.";
 
 export function professionalServiceJsonLd() {
   return {
@@ -33,7 +33,12 @@ export function professionalServiceJsonLd() {
       "Server OS updates",
       "Database maintenance",
       "Scratch builds",
-      "Stack migration"
+      "Stack migration",
+      "AI integration",
+      "Mobile app development",
+      "React Native apps",
+      "App Store & Play Store deployment",
+      "On-premise AI (Ollama / LM Studio)"
     ]
   };
 }

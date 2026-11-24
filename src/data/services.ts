@@ -79,5 +79,23 @@ export const services: Service[] = [
       "Backups, indexing, slow-query tuning, migrations and integrity checks for MySQL/Postgres.",
     eta: "per audit",
     tag: "db"
+  },
+  {
+    slug: "ai-integration",
+    title: "AI Integration",
+    icon: "auto_awesome",
+    blurb:
+      "Scoped AI in your web or mobile app: chosen tools, read-only defaults, human approval, no training on your data. Use your provider or Ollama/LM Studio on your own infra.",
+    eta: "per scope",
+    tag: "ai"
+  },
+  {
+    slug: "mobile-apps",
+    title: "Mobile Apps & Store Launch",
+    icon: "smartphone",
+    blurb:
+      "React Native apps for iOS and Android, through Play Store and App Store release — with updates, monitoring and rollback.",
+    eta: "~4–8 weeks",
+    tag: "mobile"
   }
 ];
